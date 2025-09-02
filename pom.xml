@@ -51,11 +51,11 @@
       <artifactId>spring-boot-starter-validation</artifactId>
     </dependency>
 
-    <!-- DB Driver (PostgreSQL) -->
+    <!-- DB Driver (ORCL FIAP) -->
     <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <scope>runtime</scope>
+      <groupId>com.oracle.database.jdbc</groupId>
+      <artifactId>ojdbc11</artifactId>
+      <version>23.4.0.24.05</version>
     </dependency>
 
     <!-- OpenAPI / Swagger UI -->

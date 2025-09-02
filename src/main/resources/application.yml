@@ -3,14 +3,17 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/clinica
-    username: clinica
-    password: secret
+    url: jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
+    username: rm99500
+    password: 100504
+    hikari:
+      connection-test-query: SELECT 1 FROM DUAL
   jpa:
     hibernate:
-      ddl-auto: validate   # use Flyway para evoluir o schema
+      ddl-auto: none
     properties:
-      hibernate.format_sql: true
+      hibernate:
+        format_sql: true
     open-in-view: false
   flyway:
     enabled: true
