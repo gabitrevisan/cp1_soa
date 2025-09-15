@@ -2,12 +2,11 @@ package com.example.clinica.domain.model.vo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
 @Embeddable
 public class Email {
-    @Email @NotBlank
+    @jakarta.validation.constraints.Email @NotBlank
     @Column(name = "email", nullable = false)
     private String value;
 

@@ -4,7 +4,6 @@ import com.example.clinica.domain.model.vo.Cpf;
 import com.example.clinica.domain.model.vo.Email;
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
