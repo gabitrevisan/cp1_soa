@@ -2,7 +2,7 @@
 
 API RESTful desenvolvida em Spring Boot para gerenciar as operações de uma clínica, incluindo o cadastro de pacientes, médicos e o agendamento de consultas. O projeto foi desenvolvido como parte da disciplina de SOA do Prof. Salatiel Luz Marinho.
 
-**Aluna:** Gabriela Trevisan da Silva
+**Aluna:** Gabriela Trevisan da Silva  
 **RM:** 99500  
 **Turma:** 3ESPW
 
