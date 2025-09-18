@@ -9,7 +9,9 @@ import java.time.LocalDateTime;
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Consulta {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @SequenceGenerator(name = "consulta_seq", sequenceName = "CONSULTA_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "consulta_seq")
     private Long id;
 
     @ManyToOne(optional = false) @JoinColumn(name = "paciente_id")

@@ -12,7 +12,9 @@ import java.util.List;
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Paciente {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @SequenceGenerator(name = "paciente_seq", sequenceName = "PACIENTE_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "paciente_seq")
     private Long id;
 
     @Embedded
@@ -25,5 +27,6 @@ public class Paciente {
     private String nome;
 
     @OneToMany(mappedBy = "paciente")
+    @Builder.Default
     private List<Consulta> consultas = new ArrayList<>();
 }

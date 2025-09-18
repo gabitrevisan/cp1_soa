@@ -10,7 +10,9 @@ import java.util.List;
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Medico {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @SequenceGenerator(name = "medico_seq", sequenceName = "MEDICO_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "medico_seq")
     private Long id;
 
     @Column(nullable = false)
@@ -20,5 +22,6 @@ public class Medico {
     private String crm;
 
     @OneToMany(mappedBy = "medico")
+    @Builder.Default
     private List<Consulta> consultas = new ArrayList<>();
 }
